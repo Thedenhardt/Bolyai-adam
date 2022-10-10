@@ -6,7 +6,6 @@ print(év)
 
 if  1984 <=év<= 2043:
     év = év%10
-    print(év)
     print("zöld év")
 elif év == 3 or 4:
     print("piros év")
