@@ -1,27 +1,54 @@
-operations = ['+', '-', '*', '/']
+def osszeadas(a, b):
+    return a + b
 
 
-def calculate(input_string):
-    resz = input_string.split(' ')
-    if resz[1] in operations:
-        szam1 = float(resz[0])
-        szam2 = float(resz[2])
+def kivonas(a, b):
+    return a - b
 
-        if resz[1] == '+':
-            return szam1 + szam2
-        elif resz[1] == '-':
-            return szam1 - szam2
-        elif resz[1] == '*':
-            return szam1 * szam2
-        elif resz[1] == '/':
-            if szam2 == 0:
-                return "Nullával nem lehet osztani"
-            else:
-                return szam1 / szam2
+
+def szorzas(a, b):
+    return a * b
+
+
+def osztas(a, b):
+    return a / b
+
+
+def hatvany(a, b):
+    return a ** b
+
+
+def faktorialis(a):
+    szum = 1
+    for i in range(1, a + 1):
+        szum *= i
+    return szum
+
+
+def main():
+    sor = input("Számolás: ")
+    muvelet = ''
+    muveletek = ['+', '-', '*', '/', '^', '!']
+    for i in sor:
+        if i in muveletek:
+            muvelet = i
+    if '!' != muvelet:
+        a, b = list(map(int, sor.strip().split(muvelet)))
+        eredmeny = 0
+        if muvelet == '+':
+            eredmeny = osszeadas(a, b)
+        elif muvelet == '-':
+            eredmeny = kivonas(a, b)
+        elif muvelet == '*':
+            eredmeny = szorzas(a, b)
+        elif muvelet == '/':
+            eredmeny = osztas(a, b)
+        elif muvelet == '^':
+            eredmeny = hatvany(a, b)
     else:
-        return "Helytelen művelet"
+        a = int(sor.strip().split(muvelet)[0])
+        eredmeny = faktorialis(a)
+    print(f"Eredmény: {eredmeny}")
 
 
-input_string = input("adj meg egy számolást: ")
-result = calculate(input_string)
-print(result)
+main()
