@@ -1,5 +1,4 @@
-# Open the file in read mode
-with open("vers.txt", "r") as file:
+with open("vers.txt", "r",encoding="utf-8") as file:
     vers = file.read()
 
 betuk = len(vers)
