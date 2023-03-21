@@ -1,4 +1,3 @@
-import datetime
 def fajlOlvas():
     autok = []
     with open('autok.txt', 'r', encoding='utf-8') as f:
