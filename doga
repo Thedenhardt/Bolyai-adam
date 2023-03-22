@@ -1,0 +1,11 @@
+szamok={7,-5,11,12,11,14,-2}
+ossz=0
+with open("szamok30.txt",'r',encoding="utf-8") as source:
+    numbers=source.read()
+    szam=numbers.strip().split()
+   # szamok.append(len)
+#if szam<=0:
+ #   szam.append(páratlan)
+#ossz= ossz+szamok
+
+print(szamok)
