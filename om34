@@ -1,0 +1,18 @@
+def ter():
+    a= int(input("a:"))
+    b= int(input("b:"))
+    t= a*b
+    return t
+print(ter())
+
+def oszt():
+    n=int(input(":"))
+    n2=int(input(":"))
+    while n2:
+        n1,n2=n2,n1%n2
+def prime():
+    n=int(input(":"))
+    if n/2==1 and n/1==1:
+        return "prím"
+    else:
+        return "nem az"
