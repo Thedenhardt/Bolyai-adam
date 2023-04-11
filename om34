@@ -1,18 +1,57 @@
+#1
 def ter():
     a= int(input("a:"))
     b= int(input("b:"))
     t= a*b
     return t
 print(ter())
+#2
 
 def oszt():
     n=int(input(":"))
     n2=int(input(":"))
     while n2:
-        n1,n2=n2,n1%n2
+  n1,n2=n2,n1%n2
+#3
+
+n = int(input(":"))
+divisors = 0
+for i in range(1, n+1):
+    if n % i == 0:
+        divisors += 1
+return divisors
+
+#4
 def prime():
     n=int(input(":"))
     if n/2==1 and n/1==1:
         return "prím"
     else:
         return "nem az"
+#5
+
+def gyak(elso, ertek):
+    count = 0
+    for element in elso:
+        if element == ertek:
+            count += 1
+    return count
+
+#7
+def kivonas(list1, list2):
+    return abs(len(list1) - len(list2))
+        
+#8
+def atl(lst):
+    if len(lst) == 0:
+        return 0
+    else:
+        return sum(lst) / len(lst)
+#9
+
+def szam(elso):
+    count = 0
+    for num in elso:
+        if num % 3 == 0 and num % 5 != 0:
+            count += 1
+    return count
